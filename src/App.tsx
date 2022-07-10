@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Card, Badge } from 'react-bootstrap'
+import './App.scss';
+import Details from './components/Details';
+import Favorites from './components/Favorites';
+import LocationField from './components/Location';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <Card border="dark" className='container-card'>
+        <h1>
+          <Badge bg="secondary">My Forecast</Badge>
+        </h1>
+        <div className='location-section'>
+          <LocationField />
+          <Favorites />
+        </div>
+        <Details />
+      </Card>
     </div>
   );
 }
