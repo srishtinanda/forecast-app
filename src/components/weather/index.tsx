@@ -1,16 +1,11 @@
+import React from 'react'
 import { Card } from 'react-bootstrap'
-import logo from '../assets/w_logo.png';
-import { useAppSelector } from '../redux/hooks'
-import { RootState } from '../store';
-import { monthMapper } from '../helpers/monthMapper';
+import logo from '../../assets/w_logo.png'
+import { useAppSelector } from '../../redux/hooks'
+import { RootState } from '../../store'
+import { getFormattedDate } from '../../helpers/monthMapper'
+import './weather.scss'
 
-const formattedTime = (input: string) => {
-    const dateArr = input.split('-')
-    const day = dateArr[2]
-    const month = dateArr[1] as keyof typeof monthMapper
-    const monthValue = monthMapper[month]
-    return `${day} ${monthValue}`
-}
 
 const Weather = () => {
     const { dailyWeather, unit } = useAppSelector((state: RootState) => state.location);
@@ -20,7 +15,7 @@ const Weather = () => {
                 i < 5 && (
                 <Card border='dark' key={time}>
                     <Card.Body>
-                        <Card.Title>{formattedTime(time)}</Card.Title>
+                        <Card.Title>{getFormattedDate(time)}</Card.Title>
                         <Card.Img variant="top" src={logo} />
                         <Card.Text>
                             <span>
@@ -40,4 +35,4 @@ const Weather = () => {
     );
 }
 
-export default Weather;
+export default React.memo(Weather);

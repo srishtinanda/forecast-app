@@ -13,54 +13,11 @@
     background-color: #D3D3D3;
     margin: 25px;
   }
-  .details {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
   .location-section {
     margin: 0 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    .location-input {
-      width: 600px;
-    }
-    .favourite {
-      width: 300px;
-    }
-  }
-  .selected-location-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px;
-    button {
-      min-width: 300px;
-    }
-  }
-  .weather {
-    display: flex;
-    flex-wrap: wrap;
-    .card {
-      min-height: 300px;
-      max-height: 300px;
-    }
-    img {
-      max-width: 200px;
-      max-height: 200px;
-    }
-    .temp-label {
-      display: block;
-    }
-    .card-title {
-      text-align: center;
-      margin: 0px;
-    }
-    .card-text {
-      display: flex;
-      justify-content: space-between;
-    }
-    
   }
 }

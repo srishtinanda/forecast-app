@@ -1,0 +1,24 @@
+
+  .weather {
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+      min-height: 300px;
+      max-height: 300px;
+    }
+    img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    .temp-label {
+      display: block;
+    }
+    .card-title {
+      text-align: center;
+      margin: 0px;
+    }
+    .card-text {
+      display: flex;
+      justify-content: space-between;
+    }  
+  }

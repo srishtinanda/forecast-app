@@ -1,8 +1,8 @@
 import { Card, Badge } from 'react-bootstrap'
 import './App.scss';
-import Details from './components/Details';
-import Favorites from './components/Favorites';
-import LocationField from './components/Location';
+import Details from './components/details/index'
+import Favorites from './components/favorites/index'
+import LocationField from './components/location/index'
 
 const App = () => {
   return (

@@ -1,7 +1,9 @@
+import React from 'react'
 import { useState, Fragment, useRef } from 'react';
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
-import { useAppDispatch } from '../redux/hooks'
-import { selectedLocation, fetchWeatherByLocation } from '../redux/locationSlice'
+import { useAppDispatch } from '../../redux/hooks'
+import { selectedLocation, fetchWeatherByLocation } from '../../redux/locationSlice'
+import './location.scss'
 
 const SEARCH_URI = 'https://geocoding-api.open-meteo.com/v1/search?name=';
 
@@ -62,4 +64,4 @@ const LocationField = () => {
   );
 };
 
-export default LocationField
+export default React.memo(LocationField)

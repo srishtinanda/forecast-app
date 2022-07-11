@@ -1,9 +1,11 @@
+import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-import logo from '../assets/forecast.png'
-import { useAppSelector, useAppDispatch } from '../redux/hooks'
-import { addToFav } from '../redux/locationSlice'
-import { LocationState } from '../types'
-import Weather from './Weather';
+import logo from '../../assets/forecast.png'
+import { useAppSelector, useAppDispatch } from '../../redux/hooks'
+import { addToFav } from '../../redux/locationSlice'
+import { LocationState } from '../../types'
+import Weather from '../weather'
+import './details.scss'
 
 const Details = () => {
     const location = useAppSelector((state) => state.location);
@@ -42,4 +44,4 @@ const Details = () => {
     );
 }
 
-export default Details;
+export default React.memo(Details);

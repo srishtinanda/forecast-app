@@ -1,0 +1,15 @@
+
+  .details {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  
+  .selected-location-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    button {
+      min-width: 300px;
+    }
+  }
+}

@@ -1,7 +1,9 @@
+import React from 'react'
 import { Form } from 'react-bootstrap'
-import { useAppSelector, useAppDispatch } from '../redux/hooks'
-import { fetchWeatherByLocation, selectedLocation } from '../redux/locationSlice'
-import { LocationState } from '../types'
+import { useAppSelector, useAppDispatch } from '../../redux/hooks'
+import { fetchWeatherByLocation, selectedLocation } from '../../redux/locationSlice'
+import { LocationState } from '../../types'
+import './favorites.scss'
 
 const Favorites = () => {
   const favorites = useAppSelector((state) => state.location.favorites);
@@ -26,4 +28,4 @@ const Favorites = () => {
   );
 }
 
-export default Favorites;
+export default React.memo(Favorites);
